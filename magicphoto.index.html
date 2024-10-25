@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Волшебная фотогалерея</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Галерея</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <div class="gallery-container">
+      <img src="images/wand.jpg" alt="Волшебная палочка">
+      <img src="images/carpet.jpg" alt="Ковер-самолет">
+      <img src="images/potion.jpg" alt="Зелье">
+      <img src="images/book.jpg" alt="Волшебная книга">
+      <img src="images/crystal-ball.jpg" alt="Хрустальный шар">
+      <img src="images/broom.jpg" alt="Метла">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f9f7f3;
+        color: #333;
+      }
+      
+      header {
+        text-align: center;
+        background-color: #4b3c7d;
+        padding: 20px;
+      }
+      
+      h1 {
+        color: #ffffff;
+        font-size: 2.5rem;
+      }
+      
+      nav ul {
+        list-style: none;
+        padding: 10px;
+      }
+      
+      nav ul li {
+        display: inline-block;
+        margin-right: 15px;
+      }
+      
+      nav ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+      }
+      
+      .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+      
+      .gallery-container img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      
+      /* Эффект при наведении */
+      .gallery-container img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      
+      @media (max-width: 768px) {
+        header {
+          padding: 15px;
+        }
+        
+        h1 {
+          font-size: 2rem;
+        }
+      
+        nav ul li {
+          display: block;
+          margin-bottom: 10px;
+        }
+      
+        .gallery-container {
+          grid-template-columns: 1fr;
+        }
+      }
+      
+  </body>
+</html>
