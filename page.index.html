@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пример страницы</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">Шапка страницы</header>
+    <main class="main">Основная часть</main>
+    <aside class="sidebar">Боковая область</aside>
+    <section class="section1">Ещё 1</section>
+    <section class="section2">Ещё 2</section>
+    <section class="section3">Ещё 3</section>
+    <footer class="footer footer1">Секция футера 1</footer>
+    <footer class="footer footer2">Секция футера 2</footer>
+    <footer class="footer footer3">Секция футера 3</footer>
+    <footer class="footer footer4">Секция футера 4</footer>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "header header header"
+        "main main sidebar"
+        "section1 section2 section3"
+        "footer1 footer2 footer3 footer4";
+      gap: 10px;
+      padding: 10px;
+    }
+    
+    .header {
+      grid-area: header;
+      background-color: #dcdcdc;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .main {
+      grid-area: main;
+      background-color: #f5f5dc;
+      padding: 20px;
+    }
+    
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #e0f0d8;
+      padding: 20px;
+    }
+    
+    .section1, .section2, .section3 {
+      background-color: #f5deb3;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .section1 {
+      grid-area: section1;
+    }
+    
+    .section2 {
+      grid-area: section2;
+    }
+    
+    .section3 {
+      grid-area: section3;
+    }
+    
+    .footer {
+      background-color: #d3d3d3;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .footer1 {
+      grid-area: footer1;
+    }
+    
+    .footer2 {
+      grid-area: footer2;
+    }
+    
+    .footer3 {
+      grid-area: footer3;
+    }
+    
+    .footer4 {
+      grid-area: footer4;
+    }
+    
+</body>
+</html>
