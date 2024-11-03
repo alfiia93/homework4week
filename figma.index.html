@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <body>
+      <header class="header">Header</header>
+      <main class="main">
+          <section class="hero"> Section</section>
+          <section class="content">Content Section</section>
+          <aside class="sidebar">Sidebar</aside>
+      </main>
+      <footer class="footer">Footer</footer>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+    }
+    
+    /* Основной контейнер */
+    .main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .header, .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .hero {
+        grid-column: 1 / -1;
+        background-color: #f5f5f5;
+        padding: 40px;
+        text-align: center;
+    }
+    
+    .content {
+        background-color: #fafafa;
+        padding: 20px;
+    }
+    
+    .sidebar {
+        background-color: #ddd;
+        padding: 20px;
+    }
+
+  </body>
+</html>
